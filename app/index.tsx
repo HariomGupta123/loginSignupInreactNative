@@ -1,6 +1,12 @@
+import MyBotton from "@/components/MyBotton";
+import { useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
+  const router=useRouter()
+  const contineu=()=>{
+    router.navigate('/login')
+  }
   return (
     <View
       style={{
@@ -9,7 +15,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <MyBotton title={"contineu"} onPress={contineu} />
     </View>
   );
 }
